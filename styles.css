@@ -379,7 +379,7 @@ p.product-sizes {
 .about-info h2 {
   font-size: 20px;
   color: #1a237e;
-  margin-bottom: 20 px;
+  margin-bottom: 20px;
   background: none;
   border: none;
   padding: 0;
@@ -402,27 +402,50 @@ p.product-sizes {
   border-bottom: none;
 }
 
+.about-badge {
+  background: linear-gradient(135deg, #1a237e 0%, #b71c1c 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.about-badge span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-badge h3 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.about-badge p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  margin: 0;
+}
+
 /* Gallery Page */
 #gallery-grid {
   padding: 40px 20px;
 }
 
 .gallery-images {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .gallery-item {
-  flex: 1;
-  min-width: 250px;
-  max-width: 380px;
+  width: 100%;
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
   background: white;
 }
 
@@ -741,5 +764,22 @@ p.product-sizes {
   ul.nav li a {
     font-size: 10px;
     padding: 4px 6px;
+  }
+}
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-images {
+    grid-template-columns: 1fr;
   }
 }

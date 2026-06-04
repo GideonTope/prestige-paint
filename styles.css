@@ -410,6 +410,11 @@ p.product-sizes {
   text-align: center;
   margin: 30px 0;
 }
+.about-badge:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
 
 .about-badge span {
   font-size: 40px;

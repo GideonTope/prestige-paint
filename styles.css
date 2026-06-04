@@ -657,7 +657,34 @@ p.product-sizes {
    or smaller (tablets and phones)
 ================================ */
 
+@media (max-width: 900px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    min-width: unset;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    min-width: unset;
+  }
+}
+
 @media (max-width: 768px) {
+
+  /* Cards stack vertically on mobile */
+.cards {
+  flex-direction: column;
+}
   /* Container — add side padding */
   .container {
     padding: 0 12px;

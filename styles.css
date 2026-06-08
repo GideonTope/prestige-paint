@@ -201,6 +201,24 @@ ul.nav li a.active {
   line-height: 1.6;
 }
 
+.products-cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+}
+
 /* Products Preview Section */
 #products-preview {
   padding: 60px 20px;
@@ -680,11 +698,10 @@ p.product-sizes {
 }
 
 @media (max-width: 768px) {
-
   /* Cards stack vertically on mobile */
-.cards {
-  flex-direction: column;
-}
+  .cards {
+    flex-direction: column;
+  }
   /* Container — add side padding */
   .container {
     padding: 0 12px;

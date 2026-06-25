@@ -1,110 +1,93 @@
 # 🎨 Divine Mercy Prestige Paint Depot
 
-Professional paint supplier website for Divine Mercy Prestige Paint Depot.
+A modern, responsive business website built for **Divine Mercy Prestige Paint Depot**, a premium paint company based in Ota, Ogun State, Nigeria. The website showcases the company's products, gallery, and contact information while providing a clean and user-friendly experience across all devices.
 
 ---
 
-## 🌐 Live Website
+## 🌐 Live Demo
 
 👉 https://prestigepaintdepot.com
 
 ---
 
-## 📖 About
+## 📸 Preview
 
-This project is a modern business website designed to showcase premium quality paints and make it easier for customers to discover products and contact the business.
-
-The website focuses on:
-
-- Professional branding
-- Mobile responsiveness
-- Fast loading speed
-- Clean modern UI
-- SEO optimization
-- Easy customer contact
+![Prestige Paint Preview](assets/images/prestige-preview.png)
 
 ---
 
 ## ✨ Features
 
-- Responsive Design
-- Modern Navigation
-- Product Showcase
-- Contact Section
-- WhatsApp Integration
-- SEO Optimized
-- Fast Performance
+- 🎨 Modern and responsive design
+- 📱 Mobile-friendly navigation
+- 🛍️ Product showcase section
+- 🖼️ Gallery section
+- 📞 Contact & enquiry section
+- 💬 WhatsApp integration
+- ⚡ Smooth scrolling navigation
+- 🚀 Fast loading performance
+- 🔍 SEO optimized
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Built With
 
 - HTML5
 - CSS3
 - JavaScript
-- Vercel
 
 ---
 
-## 📂 Folder Structure
+## 📂 Project Structure
 
-```
-assets/
-css/
-js/
-index.html
+```text
+prestige-paint/
+│
+├── assets/
+│   └── images/
+│       └── prestige-preview.jpg
+│
+├── css/
+├── js/
+├── index.html
+└── README.md
 ```
 
 ---
 
-## 🚀 Installation
+## 🚀 Getting Started
 
-Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/ajagbegideon/PRESTIGE-REPO-NAME.git
+git clone https://github.com/ajagbegideon/prestige-paint.git
 ```
 
-Open
-
-```
-index.html
-```
-
-in your browser.
+Open the project folder and launch `index.html` in your browser.
 
 ---
 
-## 📱 Responsive
+## 🎯 Purpose
 
-The website is fully responsive across:
+This project was developed to provide Divine Mercy Prestige Paint Depot with a professional online presence where customers can:
 
-- Desktop
-- Laptop
-- Tablet
-- Mobile
+- Explore available paint products
+- View the company gallery
+- Contact the business easily
+- Send enquiries through the website
 
 ---
 
 ## 👨‍💻 Author
 
-Ajagbe Gideon
+**Ajagbe Gideon**
 
-Portfolio:
-https://gideon-ajagbe.vercel.app
-
-GitHub:
-https://github.com/ajagbegideon
-
-LinkedIn:
-https://www.linkedin.com/in/ajagbegideon
+- 🌐 Portfolio: https://gideon-ajagbe.vercel.app
+- 💼 LinkedIn: https://linkedin.com/in/ajagbegideon
+- 📧 Email: ajagbegideon6@gmail.com
 
 ---
 
-## ⭐ Future Improvements
+## 📄 License
 
-- Online Ordering
-- Product Search
-- Customer Reviews
-- Admin Dashboard
-- Inventory Management
+This project is for portfolio and business demonstration purposes.

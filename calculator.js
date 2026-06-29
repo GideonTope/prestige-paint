@@ -58,8 +58,6 @@ function calculate() {
   // 7. Update stats
   document.getElementById("res-area").textContent = area.toFixed(1);
   document.getElementById("res-litres").textContent = Math.ceil(litresNeeded);
-  document.getElementById("res-gallons").textContent = gallonsNeeded;
-  document.getElementById("res-drums").textContent = drumsNeeded;
 
   // 8. Render recommendation
   const recEl = document.getElementById("rec-items");

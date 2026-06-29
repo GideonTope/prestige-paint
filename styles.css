@@ -21,17 +21,79 @@ body {
   top: 15px;
   z-index: 100;
   background-color: #ffffff;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 50px;
   width: fit-content;
   margin: 30px auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Brand name — hidden on desktop */
+.nav-brand {
+  display: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #b71c1c;
+  white-space: nowrap;
+  text-decoration: none;
+  flex: 1;
+}
+
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 8px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-toggle:hover {
+  background: transparent;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background-color: #333333;
+  border-radius: 2px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+/* Animate to X */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 ul.nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -51,7 +113,7 @@ ul.nav li a:hover {
 }
 ul.nav li a.active {
   background-color: #b71c1c;
-  padding: 6px 5px;
+  padding: 6px 10px;
   color: white;
   border-radius: 10px;
 }
@@ -707,25 +769,62 @@ p.product-sizes {
     padding: 0 12px;
   }
 
-  /* Header — make it full width on mobile */
+  /* Header — full width bar */
   #header {
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: calc(100% - 24px);
+    padding: 12px 16px;
+    border-radius: 16px;
     margin: 12px auto;
     top: 8px;
     box-sizing: border-box;
   }
 
-  /* Nav — smaller gap between links */
+  .nav-brand {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
   ul.nav {
-    gap: 0px;
-    justify-content: space-between;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding: 10px 8px;
+    z-index: 200;
+  }
+
+  ul.nav.open {
+    display: flex;
+  }
+
+  ul.nav li {
+    width: 100%;
   }
 
   ul.nav li a {
-    font-size: 11px;
-    padding: 5px 6px;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  ul.nav li a:hover {
+    background-color: #f5f5f5;
+    color: #333;
   }
 
   /* Hero — smaller padding and font */
@@ -810,12 +909,7 @@ p.product-sizes {
   }
 }
 
-@media (max-width: 390px) {
-  ul.nav li a {
-    font-size: 10px;
-    padding: 4px 6px;
-  }
-}
+/* 390px nav override removed — hamburger handles all small screens */
 .gallery-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

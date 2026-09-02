@@ -1,697 +1,389 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Use our free paint calculator to find out exactly how much paint you need for any room. Serving Ota, Ogun State — Divine Mercy Prestige Paint Depot."
-    />
-    <meta
-      name="keywords"
-      content="paint calculator, how much paint do I need, paint quantity calculator, emulsion paint calculator, Ota Ogun State, Divine Mercy Prestige Paint Depot"
-    />
-    <meta name="author" content="Ajagbe Gideon" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paint Calculator — How Much Paint Do You Need? | Prestige Paint Depot</title>
+<meta name="description" content="Answer three simple questions and find out how many buckets of paint your room needs. Free calculator from Prestige Paint Depot, Ota, Ogun State.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1e1e1d">
+<meta name="geo.region" content="NG-OG">
+<meta name="geo.placename" content="Ota, Ogun State">
+<link rel="canonical" href="https://www.prestigepaintdepot.com/calculator.html">
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-EFVQCXZWYG"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-EFVQCXZWYG");
-    </script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prestige Paint Depot">
+<meta property="og:url" content="https://www.prestigepaintdepot.com/calculator.html">
+<meta property="og:title" content="Paint Calculator — How Much Paint Do You Need? | Prestige Paint Depot">
+<meta property="og:description" content="Answer three simple questions and find out how many buckets of paint your room needs. Free calculator from Prestige Paint Depot, Ota, Ogun State.">
+<meta property="og:image" content="https://www.prestigepaintdepot.com/assets/img/hero-stack-1400.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
-    <title>Paint Calculator — Divine Mercy Prestige Paint Depot</title>
-    <link rel="icon" type="image/png" href="/images/divine-mercy-logo.png" />
-    <link rel="apple-touch-icon" href="/images/divine-mercy-logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
 
-    <style>
-      /* ── Calculator-specific styles only ── */
+<link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/app.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["HomeAndConstructionBusiness","Store"],"name":"Divine Mercy Prestige Paint Depot","alternateName":"Prestige Paint Depot","url":"https://www.prestigepaintdepot.com/","image":"https://www.prestigepaintdepot.com/assets/img/shopfront-1400.jpg","logo":"https://www.prestigepaintdepot.com/assets/img/favicon/apple-touch-icon.png","telephone":"+2347035600054","email":"ajagbegloria0@gmail.com","priceRange":"$$","foundingDate":"2015","address":{"@type":"PostalAddress","streetAddress":"Km 7, Idiroko Road, Iyana Iyesi","addressLocality":"Ota","addressRegion":"Ogun State","addressCountry":"NG"},"hasMap":"https://www.google.com/maps/dir/?api=1&destination=Km+7,+Idiroko+Road,+Iyana+Iyesi,+Ota,+Ogun+State,+Nigeria","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}],"brand":[{"@type":"Brand","name":"Prestige"},{"@type":"Brand","name":"Texalux"}],"description":"Genuine Prestige and Texalux paints \u2014 emulsion, matt, satin, gloss and textured finishes \u2014 plus painting accessories, in Ota, Ogun State."}</script>
+<!-- Google Analytics, carried over from the previous site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFVQCXZWYG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EFVQCXZWYG');
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-      #calculator-layout {
-        display: flex;
-        gap: 30px;
-        padding: 20px;
-        flex-wrap: wrap;
-        margin-bottom: 60px;
-      }
-
-      /* ── Form card ── */
-      .calc-form-card {
-        flex: 1;
-        min-width: 280px;
-        background: white;
-        border-radius: 16px;
-        padding: 36px 32px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border-top: 4px solid #b71c1c;
-      }
-
-      .calc-form-card h2 {
-        font-size: 20px;
-        color: #1a237e;
-        margin-bottom: 24px;
-        border-left: 5px solid #b71c1c;
-        padding-left: 12px;
-        background: none;
-      }
-
-      /* ── Form rows ── */
-      .form-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-      }
-
-      .form-group {
-        margin-bottom: 18px;
-      }
-
-      .form-group label {
-        display: block;
-        font-weight: 600;
-        color: #1a237e;
-        margin-bottom: 6px;
-        font-size: 14px;
-      }
-
-      .form-group label span {
-        font-weight: 400;
-        color: #888;
-        font-size: 12px;
-      }
-
-      .form-group input[type="number"],
-      .form-group select {
-        width: 100%;
-        padding: 11px 14px;
-        border: 1px solid #dddddd;
-        border-radius: 8px;
-        font-family: "Poppins", Arial, sans-serif;
-        font-size: 14px;
-        color: #333333;
-        background-color: #f9f9f9;
-        box-sizing: border-box;
-        transition: 0.3s;
-        appearance: none;
-        -webkit-appearance: none;
-      }
-
-      .form-group input[type="number"]:focus,
-      .form-group select:focus {
-        outline: none;
-        border: 2px solid #b71c1c;
-        background-color: white;
-      }
-
-      .form-group input[type="number"]:hover,
-      .form-group select:hover {
-        border-color: #888888;
-      }
-
-      .field-hint {
-        font-size: 11px;
-        color: #888;
-        margin-top: 4px;
-      }
-
-      /* ── Radio (coats) ── */
-      .radio-group {
-        display: flex;
-        gap: 20px;
-        margin-top: 4px;
-      }
-
-      .radio-option {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        font-size: 14px;
-        cursor: pointer;
-        color: #333;
-      }
-
-      .radio-option input[type="radio"] {
-        accent-color: #b71c1c;
-        width: 16px;
-        height: 16px;
-        cursor: pointer;
-      }
-
-      /* ── Tip box ── */
-      .tip-box {
-        background: #fff8e1;
-        border-left: 4px solid #f9a825;
-        border-radius: 8px;
-        padding: 12px 16px;
-        font-size: 13px;
-        color: #5d4037;
-        margin-bottom: 20px;
-        line-height: 1.5;
-      }
-
-      /* ── Calculate button (reuses .btn from styles.css) ── */
-      #calc-btn {
-        width: 100%;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-        font-family: "Poppins", Arial, sans-serif;
-        font-size: 15px;
-      }
-
-      /* ── Results card ── */
-      .calc-results-card {
-        flex: 1;
-        min-width: 280px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      /* Stats row */
-      .result-stats {
-        display: grid;
-        margin-bottom: 30kpx;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-      }
-
-      .stat-box {
-        background: white;
-        border-radius: 12px;
-        padding: 20px 16px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        border-top: 4px solid #b71c1c;
-        transition: 0.3s;
-      }
-
-      .stat-box:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
-      }
-
-      .stat-value {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #b71c1c;
-        line-height: 1;
-      }
-
-      .stat-label {
-        font-size: 12px;
-        color: #666;
-        margin-top: 6px;
-        font-weight: 600;
-      }
-
-      /* Recommendation box */
-      .rec-box {
-        margin-top: 30px;
-        margin-bottom: 20px;
-        background: white;
-        border-radius: 12px;
-        padding: 24px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        border-top: 4px solid #1a237e;
-      }
-
-      .rec-box h3 {
-        font-size: 16px;
-        color: #1a237e;
-        margin-bottom: 14px;
-      }
-
-      .rec-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px solid #f0f0f0;
-        font-size: 14px;
-      }
-
-      .rec-item:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      .rec-item-name {
-        color: #333;
-        font-weight: 500;
-      }
-
-      .rec-item-qty {
-        background-color: #b71c1c;
-        color: white;
-        font-size: 12px;
-        font-weight: 700;
-        padding: 3px 12px;
-        border-radius: 20px;
-        white-space: nowrap;
-      }
-
-      /* Disclaimer */
-      .calc-disclaimer {
-        font-size: 12px;
-        color: #888;
-        margin-top: 10px;
-        line-height: 1.6;
-      }
-
-      /* WhatsApp order button reuses .btn.btn-whatsapp from styles.css */
-      #wa-order-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-        text-align: center;
-        font-size: 15px;
-        margin-top: 4px;
-      }
-
-      #reset-btn {
-        background: none;
-        border: none;
-        color: #b71c1c;
-        font-family: "Poppins", Arial, sans-serif;
-        font-size: 13px;
-        cursor: pointer;
-        text-decoration: underline;
-        margin-top: 6px;
-        display: block;
-        text-align: center;
-        width: 100%;
-      }
-
-      /* Empty state */
-      .results-empty {
-        background: white;
-        border-radius: 16px;
-        padding: 50px 30px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-        color: #aaa;
-      }
-
-      .results-empty .empty-icon {
-        font-size: 52px;
-        display: block;
-        margin-bottom: 14px;
-      }
-
-      .results-empty p {
-        font-size: 14px;
-        line-height: 1.6;
-      }
-
-      /* How it works section */
-      #how-it-works {
-        padding: 50px 20px;
-        background: white;
-        border-radius: 16px;
-        margin: 0 20px 60px;
-        text-align: center;
-      }
-
-      #how-it-works h2 {
-        font-size: 26px;
-        color: #1a237e;
-        margin-bottom: 10px;
-      }
-
-      .steps-grid {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 36px;
-        text-align: left;
-      }
-
-      .step-item {
-        flex: 1;
-        min-width: 180px;
-        display: flex;
-        gap: 14px;
-        align-items: flex-start;
-      }
-
-      .step-num {
-        background: linear-gradient(135deg, #1a237e 0%, #b71c1c 100%);
-        color: white;
-        font-size: 13px;
-        font-weight: 700;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-
-      .step-text strong {
-        display: block;
-        font-size: 14px;
-        color: #1a237e;
-        margin-bottom: 4px;
-      }
-
-      .step-text p {
-        font-size: 13px;
-        color: #666;
-        margin: 0;
-        line-height: 1.6;
-      }
-
-      /* Mobile */
-      @media (max-width: 768px) {
-        #calculator-layout {
-          flex-direction: column;
-          padding: 16px 0;
-        }
-
-        .form-row {
-          grid-template-columns: 1fr;
-        }
-
-        .result-stats {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        #how-it-works {
-          margin: 0 0 40px;
-          padding: 36px 16px;
-        }
-
-        .steps-grid {
-          flex-direction: column;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <!-- ── Nav (exact same as all other pages) ── -->
-      <header id="header">
-        <nav>
-          <span class="nav-brand">🎨 Prestige Paint Depot </span>
-          <button
-            class="nav-toggle"
-            id="nav-toggle"
-            aria-label="Open menu"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
+    <header class="masthead">
+      <div class="shell masthead__inner">
+        <a class="wordmark" href="index.html"><b>Prestige</b><span>Paint Depot</span></a>
+        <nav aria-label="Primary"><ul class="nav"><li><a href="products.html">Products</a></li><li><a href="colours.html">Colours</a></li><li><a href="calculator.html" aria-current="page">Calculator</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <div class="masthead__actions">
+          <a class="wa-link" href="https://wa.me/2347035600054?text=Hello%20Prestige%20Paint%20Depot%2C%20I%20have%20an%20enquiry."
+             target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.66 4.56 1.8 6.44L4 29l7.7-1.76a12 12 0 004.32.8h.01C22.65 28.04 28 22.66 28 16.02 28 9.4 22.65 3 16.02 3zm0 22.1c-1.5 0-2.94-.4-4.2-1.15l-.3-.18-4.56 1.04 1.1-4.44-.2-.32a9.7 9.7 0 01-1.5-5.03c0-5.4 4.38-9.78 9.78-9.78 5.4 0 9.78 4.38 9.78 9.78 0 5.4-4.4 9.08-9.9 9.08zm5.4-7.32c-.3-.15-1.75-.87-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.34.44-.5.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.9-2.2-.24-.57-.48-.5-.66-.5h-.56c-.2 0-.5.07-.77.37-.27.3-1 .98-1 2.4s1.03 2.78 1.17 2.97c.15.2 2.03 3.1 4.9 4.34.68.3 1.22.47 1.63.6.68.22 1.3.19 1.8.11.55-.08 1.75-.71 2-1.4.24-.68.24-1.27.17-1.4-.07-.13-.27-.2-.56-.35z"/></svg></a>
+          <a class="btn" href="enquiry.html"><span>Request a Quote</span></a>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+            <i></i><i></i>
           </button>
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="calculator.html" class="active">Calculator</a></li>
-          </ul>
-        </nav>
-      </header>
+        </div>
+      </div>
+    </header>
 
-      <main>
-        <!-- ── Page hero (same pattern as all inner pages) ── -->
-        <section id="page-hero">
-          <h1>🎨 Paint Calculator</h1>
-          <p>Find out exactly how much paint you need — no guesswork</p>
-        </section>
+    <div class="menu" id="menu" aria-hidden="true">
+      <div class="shell">
+        <ul class="menu__list"><li><a href="products.html"><em>01</em>Products</a></li><li><a href="colours.html"><em>02</em>Colours</a></li><li><a href="calculator.html"><em>03</em>Calculator</a></li><li><a href="about.html"><em>04</em>About</a></li><li><a href="gallery.html"><em>05</em>Gallery</a></li><li><a href="contact.html"><em>06</em>Contact</a></li></ul>
+      </div>
+      <div class="shell">
+        <div class="menu__foot">
+          <a class="meta" href="tel:+2347035600054">0703 560 0054</a>
+          <span class="meta">Km 7, Idiroko Road, Iyana Iyesi, Ota</span>
+          <a class="btn btn--sm" href="enquiry.html"><span>Request a Quote</span></a>
+        </div>
+      </div>
+    </div>
+<main id="main">
 
-        <!-- ── Main layout ── -->
-        <div id="calculator-layout">
-          <!-- LEFT: Form -->
-          <div class="calc-form-card">
-            <h2>Enter Your Room Details</h2>
+    <section class="pagehead">
+      <div class="shell pagehead__grid">
+        <div>
+          <p class="crumbs"><a href="index.html">Home</a> · Calculator</p>
+          <h1>Paint calculator</h1>
+        </div>
+        <div>
+          <p class="lede">Answer three questions and it tells you how many buckets
+          of paint to buy. This is a planning estimate, not a professional
+          measurement — call the shop on 0703 560 0054, or ask your painter
+          or contractor to confirm the quantity, before you buy.</p>
+        </div>
+      </div>
+    </section>
 
-            <!-- Dimensions -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="length">Length <span>(metres)</span></label>
-                <input
-                  type="number"
-                  id="length"
-                  min="0.1"
-                  step="0.1"
-                  placeholder="e.g. 5"
-                />
+    <section class="band on-bone">
+      <div class="shell">
+        
+        <form class="calc2" id="calc" novalidate>
+          <div class="calc2__steps">
+
+            <section class="cstep">
+              <p class="cstep__n">Question 1</p>
+              <h3 class="cstep__q">How big is the room?</h3>
+              <p class="cstep__help">Tap the room closest to yours. You can change the
+                numbers afterwards if you know them.</p>
+              <div class="presets"><button type="button" class="preset" data-preset="3,3,3"><span class="preset__t">Small room</span><span class="preset__d">3 × 3 metres</span></button><button type="button" class="preset" data-preset="4,4,3"><span class="preset__t">Medium room</span><span class="preset__d">4 × 4 metres</span></button><button type="button" class="preset" data-preset="6,5,3"><span class="preset__t">Big room / parlour</span><span class="preset__d">6 × 5 metres</span></button><button type="button" class="preset" data-preset="8,6,3.5"><span class="preset__t">Shop or hall</span><span class="preset__d">8 × 6 metres</span></button></div>
+
+              <div class="unitrow">
+                <span class="unitrow__l">I measure in</span>
+                <div class="seg" role="group" aria-label="Choose metres or feet">
+                  <button type="button" class="seg__b is-on" data-unit="m">Metres</button>
+                  <button type="button" class="seg__b" data-unit="ft">Feet</button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="width">Width <span>(metres)</span></label>
-                <input
-                  type="number"
-                  id="width"
-                  min="0.1"
-                  step="0.1"
-                  placeholder="e.g. 4"
-                />
+
+              <div class="numgrid">
+                
+              <div class="numfield">
+                <label for="q-len">Length of room</label>
+                <div class="num">
+                  <button type="button" class="num__b" data-step="q-len|-1" aria-label="Less length of room">&minus;</button>
+                  <input id="q-len" type="number" inputmode="decimal" step="0.5" min="0" value="4">
+                  <span class="num__unit" data-unit-label>m</span>
+                  <button type="button" class="num__b" data-step="q-len|1" aria-label="More length of room">+</button>
+                </div>
+                
               </div>
-            </div>
-
-            <div class="form-group">
-              <label for="height">Wall Height <span>(metres)</span></label>
-              <input
-                type="number"
-                id="height"
-                min="0.1"
-                step="0.1"
-                placeholder="e.g. 3"
-              />
-            </div>
-
-            <!-- Surface -->
-            <div class="form-group">
-              <label for="surface">What are you painting?</label>
-              <select id="surface">
-                <option value="walls">Walls only</option>
-                <option value="walls-ceiling">Walls + Ceiling</option>
-                <option value="ceiling">Ceiling only</option>
-              </select>
-            </div>
-
-            <!-- Paint type -->
-            <div class="form-group">
-              <label for="paintType">Paint Type</label>
-              <select id="paintType">
-                <option value="emulsion">
-                  Emulsion Paint (interior walls)
-                </option>
-                <option value="satin">Satin Paint (interior walls)</option>
-                <option value="gloss">Gloss Paint (doors, wood, metals)</option>
-                <option value="texcote">Texcote (exterior walls)</option>
-              </select>
-            </div>
-
-            <!-- Openings -->
-            <div class="form-group">
-              <label for="openings"
-                >Number of Doors & Windows <span>(optional)</span></label
-              >
-              <input
-                type="number"
-                id="openings"
-                min="0"
-                step="1"
-                value="0"
-                placeholder="e.g. 2"
-              />
-              <p class="field-hint">Each door or window = ~2 sq/m deducted</p>
-            </div>
-
-            <!-- Coats -->
-            <div class="form-group">
-              <label>Number of Coats</label>
-              <div class="radio-group">
-                <label class="radio-option">
-                  <input type="radio" name="coats" value="1" />
-                  1 Coat
-                </label>
-                <label class="radio-option">
-                  <input type="radio" name="coats" value="2" checked />
-                  2 Coats
-                </label>
+                
+              <div class="numfield">
+                <label for="q-wid">Width of room</label>
+                <div class="num">
+                  <button type="button" class="num__b" data-step="q-wid|-1" aria-label="Less width of room">&minus;</button>
+                  <input id="q-wid" type="number" inputmode="decimal" step="0.5" min="0" value="4">
+                  <span class="num__unit" data-unit-label>m</span>
+                  <button type="button" class="num__b" data-step="q-wid|1" aria-label="More width of room">+</button>
+                </div>
+                
               </div>
-            </div>
+                
+              <div class="numfield">
+                <label for="q-hgt">Height of wall</label>
+                <div class="num">
+                  <button type="button" class="num__b" data-step="q-hgt|-1" aria-label="Less height of wall">&minus;</button>
+                  <input id="q-hgt" type="number" inputmode="decimal" step="0.5" min="0" value="3">
+                  <span class="num__unit" data-unit-label>m</span>
+                  <button type="button" class="num__b" data-step="q-hgt|1" aria-label="More height of wall">+</button>
+                </div>
+                <p class="num__note">Most rooms are about 3 metres (10 feet) high.</p>
+              </div>
+              </div>
 
-            <!-- Tip box -->
-            <div class="tip-box">
-              💡 <strong>Tip:</strong> We recommend 2 coats for the best finish
-              and more durable results.
-            </div>
+              <p class="cstep__tip"><strong>No tape rule?</strong> Walk the room
+                heel to toe. One normal adult step is about 0.75 metres, so four
+                steps is roughly 3 metres. Close is good enough — we round up.</p>
+            </section>
 
-            <button class="btn" id="calc-btn" onclick="calculate()">
-              Calculate Paint Needed →
-            </button>
+            <section class="cstep">
+              <p class="cstep__n">Question 2</p>
+              <h3 class="cstep__q">How many doors and windows?</h3>
+              <p class="cstep__help">We remove them from the wall, so you are not
+                buying paint for a door.</p>
+              <div class="numgrid numgrid--2">
+                
+              <div class="numfield">
+                <label for="q-doors">Doors in the room</label>
+                <div class="num">
+                  <button type="button" class="num__b" data-step="q-doors|-1" aria-label="Less doors in the room">&minus;</button>
+                  <input id="q-doors" type="number" inputmode="decimal" step="1" min="0" value="1">
+                  
+                  <button type="button" class="num__b" data-step="q-doors|1" aria-label="More doors in the room">+</button>
+                </div>
+                
+              </div>
+                
+              <div class="numfield">
+                <label for="q-wins">Windows in the room</label>
+                <div class="num">
+                  <button type="button" class="num__b" data-step="q-wins|-1" aria-label="Less windows in the room">&minus;</button>
+                  <input id="q-wins" type="number" inputmode="decimal" step="1" min="0" value="2">
+                  
+                  <button type="button" class="num__b" data-step="q-wins|1" aria-label="More windows in the room">+</button>
+                </div>
+                
+              </div>
+              </div>
+            </section>
+
+            <section class="cstep">
+              <p class="cstep__n">Question 3</p>
+              <h3 class="cstep__q">Which paint, and how many coats?</h3>
+              <p class="cstep__help">Not sure? Leave it on Emulsion and 2 coats —
+                that is what most rooms take.</p>
+              <div class="choices"><label class="choice">
+                  <input type="radio" name="finish" value="emulsion" checked>
+                  <span class="choice__box"><span class="choice__t">Emulsion</span><span class="choice__d">Normal wall paint. Most rooms use this.</span></span>
+                </label><label class="choice">
+                  <input type="radio" name="finish" value="matt">
+                  <span class="choice__box"><span class="choice__t">Matt</span><span class="choice__d">Flat, no shine. Hides small bumps in the wall.</span></span>
+                </label><label class="choice">
+                  <input type="radio" name="finish" value="satin">
+                  <span class="choice__box"><span class="choice__t">Satin</span><span class="choice__d">Soft shine. Easy to clean, good for busy rooms.</span></span>
+                </label><label class="choice">
+                  <input type="radio" name="finish" value="gloss">
+                  <span class="choice__box"><span class="choice__t">Gloss</span><span class="choice__d">Shiny. For doors, frames and wood.</span></span>
+                </label><label class="choice">
+                  <input type="radio" name="finish" value="texcote">
+                  <span class="choice__box"><span class="choice__t">Texcote</span><span class="choice__d">Thick, textured. For outside walls.</span></span>
+                </label></div>
+              <div class="numgrid numgrid--1">
+                
+              <div class="numfield">
+                <label for="q-coats">Coats of paint</label>
+                <div class="num">
+                  <button type="button" class="num__b" data-step="q-coats|-1" aria-label="Less coats of paint">&minus;</button>
+                  <input id="q-coats" type="number" inputmode="decimal" step="1" min="1" value="2">
+                  
+                  <button type="button" class="num__b" data-step="q-coats|1" aria-label="More coats of paint">+</button>
+                </div>
+                <p class="num__note">One coat over the same colour. Two coats for a new colour.</p>
+              </div>
+              </div>
+            </section>
           </div>
 
-          <!-- RIGHT: Results -->
-          <div class="calc-results-card" id="results-panel">
-            <!-- Empty state shown before calculation -->
-            <div class="results-empty" id="empty-state">
-              <span class="empty-icon">🪣</span>
-              <p>
-                Enter your room dimensions on the left and hit
-                <strong>Calculate</strong> to see how much paint you need.
-              </p>
+          <div class="calc2__answer">
+            <div class="answer on-dark" aria-live="polite">
+              <p class="answer__l">What to buy</p>
+              <p class="answer__buy" id="q-packs">—</p>
+              <p class="answer__lit" id="q-litres">Fill in the room size above.</p>
+              <p class="answer__plain" id="q-summary"></p>
+              <div class="answer__cta">
+                <a class="btn btn--full" id="q-wa" target="_blank" rel="noopener"
+                   href="https://wa.me/2347035600054?text=Hello%20Prestige%20Paint%20Depot%2C%20I%20would%20like%20to%20check%20a%20paint%20quantity."><span>Send this to us on WhatsApp</span></a>
+                <a class="btn btn--ghost btn--full" href="tel:+2347035600054"><span>Call 0703 560 0054</span></a>
+              </div>
+              <p class="answer__note"><strong>This is an estimate — it can be
+                wrong.</strong> Old, rough, bare or dark walls all drink more paint
+                than this figure assumes. Before you buy, bring this number to the
+                shop, or better still, have your painter or contractor check the
+                room and confirm the quantity in person. Do not treat this number
+                as final.</p>
             </div>
+          </div>
 
-            <!-- Results (hidden until calculated) -->
-            <div id="results-content" style="display: none">
-              <!-- Stats -->
-              <div class="result-stats">
-                <div class="stat-box">
-                  <div class="stat-value" id="res-area">—</div>
-                  <div class="stat-label">sq/m Total Area</div>
-                </div>
-                <div class="stat-box">
-                  <div class="stat-value" id="res-litres">—</div>
-                  <div class="stat-label">Litres Needed</div>
-                </div>
-              </div>
+          <!-- Phone only: the answer follows you down the form, because on a
+               small screen the answer card is otherwise off the bottom of the
+               screen while you are changing the very numbers that move it. -->
+          <button type="button" class="calcbar" id="calcbar" hidden>
+            <span class="calcbar__l">You need</span>
+            <span class="calcbar__v" id="q-packs-mini">—</span>
+            <span class="calcbar__go">See it</span>
+          </button>
+        </form>
+      </div>
+    </section>
 
-              <!-- Recommendation -->
-              <div class="rec-box">
-                <h3>🛒 Recommended Purchase</h3>
-                <div id="rec-items"></div>
-                <p class="calc-disclaimer">
-                  ⚠️ Based on standard coverage of 10 sq/m per litre per coat on
-                  smooth surfaces. Rough or porous walls may need more.
-                </p>
-              </div>
+    <section class="band">
+      <div class="shell">
+        <div style="max-width:54ch;margin-bottom:clamp(30px,4vw,56px)">
+          <p class="label">Plain answers</p>
+          <h2 class="d2" style="margin-top:22px">Questions people ask us at the counter.</h2>
+        </div>
+        <div class="qa">
+          <div class="qa__item">
+            <h3>How do I measure my room?</h3>
+            <p>Measure the floor from wall to wall, one way and then the other —
+            that is the length and the width. The height is floor to ceiling,
+            usually about 3 metres. If you have no tape rule, count your steps:
+            one normal step is about 0.75 metres.</p>
+          </div>
+          <div class="qa__item">
+            <h3>What is a coat?</h3>
+            <p>One coat is painting the whole wall once. Two coats means going
+            over it a second time after the first dries. Two coats is normal
+            when you are changing colour; one is enough when you are painting
+            the same colour again.</p>
+          </div>
+          <div class="qa__item">
+            <h3>Why does it say buckets and gallons, not litres?</h3>
+            <p>Because that is how paint is sold across the counter. Emulsion,
+            matt and satin come in 20-litre buckets and 4-litre gallons; gloss
+            comes in 4-litre tins; Texcote comes in 20-litre buckets only. The
+            calculator gives you the cheapest mix of those sizes.</p>
+          </div>
+          <div class="qa__item">
+            <h3>Will this number be exact?</h3>
+            <p>No, and no calculator can be — this one included. Old, bare, rough
+            or dark walls swallow more paint than smooth ones, and every wall is
+            different. Treat this as a starting estimate only, not a final answer.
+            For anything beyond a small touch-up, have your painter or contractor
+            look at the actual room before you buy — that is the only way to be
+            sure.</p>
+          </div>
+          <div class="qa__item">
+            <h3>Can somebody just tell me?</h3>
+            <p>Yes. Call 0703 560 0054 or 0915 911 3222, or message us on
+            WhatsApp with the size of your room, and we will tell you what to
+            buy. You do not have to use the calculator at all.</p>
+          </div>
+          <div class="qa__item">
+            <h3>What if I buy too much?</h3>
+            <p>Better a little over than a little short — a part-used bucket keeps
+            for touch-ups, while a colour mixed later may not match exactly.
+            The calculator rounds up for that reason.</p>
+          </div>
+        </div>
+        <div style="margin-top:clamp(34px,5vw,60px);display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn" href="https://wa.me/2347035600054?text=Hello%20Prestige%20Paint%20Depot%2C%20I%20would%20like%20to%20check%20a%20paint%20quantity." target="_blank" rel="noopener"><span>Ask us on WhatsApp</span></a>
+          <a class="btn btn--ghost" href="tel:+2347035600054"><span>Call 0703 560 0054</span></a>
+        </div>
+      </div>
+    </section>
 
-              <!-- Order on WhatsApp -->
-              <a
-                class="btn btn-whatsapp"
-                id="wa-order-btn"
-                href="#"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                >
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                  />
-                </svg>
-                Order These Products on WhatsApp
-              </a>
-
-              <button id="reset-btn" onclick="resetCalc()">
-                ← Calculate again
-              </button>
+    
+    <section class="band on-dark" id="contact">
+      <div class="shell">
+        <div class="contact-grid">
+          <div class="contact-grid__head">
+            <p class="label reveal"><span class="label-num">11</span> Contact</p>
+            <h2 class="d1 reveal" style="--d:60ms;margin-top:26px">Come and<br>see the chart.</h2>
+            <p class="lede reveal" style="--d:120ms;margin-top:24px">
+              Colour on a screen is never colour on a wall. The printed charts,
+              the stock and someone to ask are all in the same place.
+            </p>
+            <div class="reveal" style="--d:180ms;display:flex;gap:14px;flex-wrap:wrap;margin-top:34px">
+              <a class="btn" href="https://wa.me/2347035600054?text=Hello%20Prestige%20Paint%20Depot%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener"><span>WhatsApp us</span></a>
+              <a class="btn btn--ghost" href="tel:+2347035600054"><span>Call 0703 560 0054</span></a>
+            </div>
+          </div>
+          <div class="contact-grid__body">
+            <dl class="dl-rows reveal">
+              <div><dt>Address</dt><dd>Km 7, Idiroko Road, Iyana Iyesi<br>Ota, Ogun State, Nigeria</dd></div>
+              <div><dt>Telephone</dt><dd><a href="tel:+2347035600054">0703 560 0054</a><br><a href="tel:+2349159113222">0915 911 3222</a></dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:ajagbegloria0@gmail.com">ajagbegloria0@gmail.com</a></dd></div>
+              <div><dt>Opening hours</dt><dd>Monday – Saturday, 8:00am – 6:00pm<br><span style="color:var(--ink-3)">Closed Sunday</span></dd></div>
+            </dl>
+            <div class="map reveal" style="--d:100ms;margin-top:34px">
+              <iframe title="Map to Divine Mercy Prestige Paint Depot, Km 7, Idiroko Road, Iyana Iyesi, Ota"
+                src="https://www.google.com/maps?q=Km+7,+Idiroko+Road,+Iyana+Iyesi,+Ota,+Ogun+State,+Nigeria&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    
+</main>
 
-        <!-- ── How it works ── -->
-        <section id="how-it-works">
-          <h2>How The Calculator Works</h2>
-          <p class="section-subtitle">Simple steps behind the result</p>
-
-          <div class="steps-grid">
-            <div class="step-item">
-              <div class="step-num">1</div>
-              <div class="step-text">
-                <strong>We calculate your area</strong>
-                <p>
-                  Using your length, width and height to get the total surface
-                  area — then subtract space for doors and windows.
-                </p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">2</div>
-              <div class="step-text">
-                <strong>We apply coverage rate</strong>
-                <p>
-                  Each litre covers roughly 10 sq/m per coat on standard walls.
-                  We multiply by your number of coats.
-                </p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">3</div>
-              <div class="step-text">
-                <strong>We recommend the right sizes</strong>
-                <p>
-                  We round up to full gallons (4L) and drums (20L) so you never
-                  run out mid-project.
-                </p>
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-num">4</div>
-              <div class="step-text">
-                <strong>You order on WhatsApp</strong>
-                <p>
-                  One tap pre-fills your full order message — product names,
-                  quantities and room details included.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- ── Footer (same as all other pages) ── -->
-      <footer id="footer">
-        <p>
-          &copy; 2026 Divine Mercy Prestige Paint Depot. All rights reserved.
-        </p>
-        <p>📍 Km 7, Idiroko Road, Iyana Iyesi, Ota, Ogun State</p>
-        <p>
-          📞 <a href="tel:07035600054">07035600054</a> |
-          <a href="tel:09159113222">09159113222</a>
-        </p>
-        <p>
-          ✉️
-          <a href="mailto:ajagbegloria0@gmail.com">ajagbegloria0@gmail.com</a>
-        </p>
-      </footer>
-    </div>
-
-    <!-- WhatsApp float (same as all other pages) -->
-    <a
-      href="https://wa.me/2347035600054?text=Hello,%20I%20want%20to%20make%20an%20enquiry%20about%20your%20paints"
-      class="whatsapp-float"
-      target="_blank"
-    >
-      <img src="images/whatsapp.png" alt="WhatsApp" width="35" height="35" />
-    </a>
-
-    <!-- ── JavaScript ── -->
-    <script src="calculator.js"></script>
-    <script src="nav.js" defer></script>
-    <script src="back-to-top.js" defer></script>
-  </body>
+    <footer class="footer">
+      <div class="shell footer__top">
+        <div class="footer__brand">
+          <a class="wordmark" href="index.html"><b>Prestige</b><span>Paint Depot</span></a>
+          <p style="margin-top:22px;max-width:34ch;color:var(--on-dark-2)">
+            Genuine Prestige and Texalux paint, finishing products and straight
+            advice, from a counter on Idiroko Road in Ota. Serving Ota since
+            2015.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="colours.html">Colour library</a></li>
+            <li><a href="calculator.html">Paint calculator</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Visit</h4>
+          <ul>
+            <li>Km 7, Idiroko Road, Iyana Iyesi</li>
+            <li>Ota, Ogun State</li>
+            <li style="margin-top:10px;color:var(--on-dark-3)">Monday – Saturday, 8:00am – 6:00pm</li>
+            <li style="color:var(--on-dark-3)">Closed Sunday</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Talk to us</h4>
+          <ul>
+            <li><a href="tel:+2347035600054">0703 560 0054</a></li>
+            <li><a href="tel:+2349159113222">0915 911 3222</a></li>
+            <li><a href="mailto:ajagbegloria0@gmail.com">ajagbegloria0@gmail.com</a></li>
+            <li><a href="https://wa.me/2347035600054?text=Hello%20Prestige%20Paint%20Depot%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="shell footer__bottom">
+        <span>© <span data-year>2026</span> Divine Mercy Prestige Paint Depot · Established 2015</span>
+        <span>Prestige® and Texalux® are trade marks of their respective manufacturers.</span>
+      </div>
+    </footer>
+<a class="wa-float" href="https://wa.me/2347035600054?text=Hello%20Prestige%20Paint%20Depot%2C%20I%20have%20an%20enquiry."
+   target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.66 4.56 1.8 6.44L4 29l7.7-1.76a12 12 0 004.32.8h.01C22.65 28.04 28 22.66 28 16.02 28 9.4 22.65 3 16.02 3zm0 22.1c-1.5 0-2.94-.4-4.2-1.15l-.3-.18-4.56 1.04 1.1-4.44-.2-.32a9.7 9.7 0 01-1.5-5.03c0-5.4 4.38-9.78 9.78-9.78 5.4 0 9.78 4.38 9.78 9.78 0 5.4-4.4 9.08-9.9 9.08zm5.4-7.32c-.3-.15-1.75-.87-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.34.44-.5.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.9-2.2-.24-.57-.48-.5-.66-.5h-.56c-.2 0-.5.07-.77.37-.27.3-1 .98-1 2.4s1.03 2.78 1.17 2.97c.15.2 2.03 3.1 4.9 4.34.68.3 1.22.47 1.63.6.68.22 1.3.19 1.8.11.55-.08 1.75-.71 2-1.4.24-.68.24-1.27.17-1.4-.07-.13-.27-.2-.56-.35z"/></svg></a>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/calculator.js" defer></script>
+</body>
 </html>

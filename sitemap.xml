@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://prestigepaintdepot.com/</loc>
-</url>
-
-<url>
-<loc>https://prestigepaintdepot.com/about.html</loc>
-</url>
-
-<url>
-<loc>https://prestigepaintdepot.com/gallery.html</loc>
-</url>
-
-<url>
-<loc>https://prestigepaintdepot.com/contact.html</loc>
-</url>
-
-<url>
-<loc>https://prestigepaintdepot.com/enquiry.html</loc>
-</url>
-
-<url>
-    <loc>https://prestigepaintdepot.com/products.html</loc>
-</url>
-
-<url>
-  <loc>https://www.prestigepaintdepot.com/calculator.html</loc>
-  <priority>0.8</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.prestigepaintdepot.com/</loc><lastmod>2026-09-02</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/products.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/colours.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/calculator.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/about.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/gallery.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/enquiry.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/contact.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/product-standard-emulsion.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/product-matt-finish.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/product-satin-finish.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/product-premium-plus-gloss.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/product-texcote-textured.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.prestigepaintdepot.com/product-texalux-premium-gloss.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prestigepaintdepot.com/sitemap.xml
+Sitemap: https://www.prestigepaintdepot.com/sitemap.xml
